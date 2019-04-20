@@ -1,0 +1,40 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+  "data": {
+    "values": [
+      {"year": "2006","weight": 20.52438868, "neck_cm":44.3321694}, {"year": "2007","weight": 20.00247895, "neck_cm":43.84577718}, {"year": "2008","weight": 19.40455933, "neck_cm":43.3922932}, {"year": "2009","weight": 19.1934209, "neck_cm":43.1660046}, {"year": "2010","weight": 19.13996078, "neck_cm":43.15687838}, {"year": "2011","weight": 19.03129151, "neck_cm":43.06568476}, {"year": "2012","weight": 18.62197416, "neck_cm":42.785919}, {"year": "2013","weight": 18.50557843, "neck_cm":42.7543722}, {"year": "2014","weight": 18.37729864, "neck_cm":42.6645324}, {"year": "2015","weight": 18.11123635, "neck_cm":42.4826176}
+    ]
+  },"encoding": {
+    "x": {
+        "field": "year",
+        "type": "temporal"
+    }
+  },
+  "layer": [
+    {
+      "mark": {"opacity": 0.3, "type": "line", "color": "#85C5A6"},
+      "encoding": {
+        "y": {
+          "field": "weight",
+          "scale": {"domain": [18, 21]},
+          "type": "quantitative",
+          "axis": {"title": "Avg. Weight Kg.", "titleColor": "#85C5A6"}
+        }
+      }
+    },
+    {
+      "mark": {"opacity": 0.3, "type": "line", "color": "#85A9C5"},
+      "encoding": {
+        "y": {
+          "field": "neck_cm",
+          "scale": {"domain": [42, 45]},
+          "type": "quantitative",
+          "axis": {"title": "Neck Width (cm)", "titleColor":"#85A9C5"}
+        }
+      }
+    }
+  ],
+  "resolve": {"scale": {"y": "independent"}
+  },
+  "config": {}
+}
